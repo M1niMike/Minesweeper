@@ -1,5 +1,6 @@
 .panel {
-  background-color: aliceblue;
-  min-height: 100vh;
-  width: 100%;
+  background-color: rgba(240, 240, 240, 0.993);
+  height: 80vh;
+  width: 100vh;
+  border-radius: 20px;
 }

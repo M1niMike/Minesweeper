@@ -7,6 +7,14 @@
 
 .container {
   max-width: 1520px;
+  min-height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  align-items: center;
 }
 
 /* .App-logo {
