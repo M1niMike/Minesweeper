@@ -1,0 +1,110 @@
+.innerPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: auto;
+}
+
+/*---CONFIG AREA---*/
+
+.gameModePanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.textMode {
+  font-size: 16pt;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.modeEasy,
+.modeNormal,
+.modeHard {
+  font-size: 12pt;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 5px;
+  border-radius: 5px;
+  width: 150px;
+  position: relative;
+}
+
+.modeEasy {
+  background-color: rgb(42, 175, 30);
+  color: white;
+  border-color: rgb(42, 175, 30);
+}
+
+.modeNormal {
+  background-color: rgb(0, 136, 248);
+  color: white;
+  border-color: rgb(0, 136, 248);
+}
+
+.modeHard {
+  background-color: rgb(175, 30, 30);
+  color: white;
+  border-color: rgb(175, 30, 30);
+}
+
+.modeEasy:hover,
+.modeNormal:hover,
+.modeHard:hover {
+  background-color: rgb(17, 82, 112);
+  color: white;
+  transition: 0.3s;
+  border-color: rgb(17, 82, 112);
+}
+
+.modeEasy:active,
+.modeNormal:active,
+.modeHard:active {
+  background-color: rgb(11, 48, 65);
+  color: rgb(202, 201, 201);
+  border-color: rgb(11, 48, 65);
+}
+
+/*---CONFIG AREA---*/
+
+/*---RETURN BUTTON---*/
+
+.actionBar {
+  margin-top: auto;
+}
+
+.btnBack {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: rgb(30, 129, 175);
+  color: white;
+  border-color: rgb(30, 129, 175);
+  width: 150px;
+  position: relative;
+}
+
+.btnBack:hover {
+  background-color: rgb(17, 82, 112);
+  color: white;
+  transition: 0.3s;
+  border-color: rgb(17, 82, 112);
+}
+
+.btnBack:active {
+  background-color: rgb(11, 48, 65);
+  color: rgb(202, 201, 201);
+  border-color: rgb(11, 48, 65);
+}
+
+/*---RETURN BUTTON---*/

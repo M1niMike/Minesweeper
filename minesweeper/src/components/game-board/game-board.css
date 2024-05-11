@@ -1,0 +1,44 @@
+.gamePanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/*---BOARD COMPONENT---*/
+.gameBoard {
+  display: grid;
+  grid-auto-rows: 25px; /* Define a altura fixa das linhas */
+  grid-gap: 0px; /* Adiciona um espaço entre as células */
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+}
+
+.cell {
+  background-color: #ccc;
+  border: 1px solid #333;
+  width: 25px; /* Define a largura das células */
+  height: 25px; /* Define a altura das células */
+}
+
+.cell:hover {
+  background-color: #f60000;
+  border: 1px solid #333;
+  width: 25px; /* Define a largura das células */
+  height: 25px; /* Define a altura das células */
+}
+
+.cell:active {
+  background-color: #f60000;
+  border: 1px solid #333;
+  width: 25px; /* Define a largura das células */
+  height: 25px; /* Define a altura das células */
+}
+
+.boardRow {
+  display: flex;
+  flex-direction: row;
+}
+/*---BOARD COMPONENT---*/

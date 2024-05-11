@@ -1,53 +1,65 @@
 .panel {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 65%;
   grid-template-rows: auto 1fr auto; /* Distribui o espaço verticalmente */
   background-color: rgba(240, 240, 240, 0.993);
-  height: 80vh;
-  max-width: 2000px; /* Defina um tamanho máximo para evitar que o painel fique muito largo em telas maiores */
   margin: 0 auto; /* Centraliza o painel horizontalmente */
   border-radius: 20px;
-  padding: 10px; /* Adiciona um espaçamento interno */
+  padding: 10px;
 }
 
+/*---HEADER---*/
+
 .logo {
-  margin-top: 10px; /* Aumenta o espaçamento superior para separar do painel */
-  font-size: 3rem; /* Diminui o tamanho do texto do logo */
+  margin-top: 10px;
+  font-size: 3rem;
   font-family: "Silkscreen", sans-serif;
   font-weight: 400;
   font-style: normal;
-  text-align: center; /* Centraliza o texto */
+  text-align: center;
 }
 
 .row {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr; /* Divide a linha em três colunas com proporções 1:2:1 */
-  align-items: center; /* Centraliza verticalmente os itens */
+  align-items: center;
 }
 
 .mineIcon,
 .flagIcon {
   width: 75px;
-  max-width: 100%; /* Ajusta a largura máxima das imagens para que elas diminuam de tamanho em telas menores */
-  height: auto; /* Mantém a proporção */
+  max-width: 100%;
+  height: auto;
 }
+
+/*---HEADER---*/
+
+/*---BUTTONS---*/
 
 .actionBtns {
   display: flex;
-  flex-direction: column; /* Alinha os botões verticalmente */
-  justify-content: center; /* Centraliza o container verticalmente */
-  align-items: center; /* Centraliza os botões horizontalmente */
-  margin-top: 20px; /* Adiciona um espaçamento superior */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .btnPlay,
 .btnScoreboard,
 .btnAbout {
-  margin: 10px; /* Adiciona um pequeno espaçamento entre os botões */
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px;
   border-radius: 5px;
   background-color: rgb(30, 129, 175);
   color: white;
   border-color: rgb(30, 129, 175);
-  width: 150px; /* Define uma largura fixa para os botões */
+  width: 150px;
 }
 
 .btnPlay:hover,
@@ -67,14 +79,29 @@
   border-color: rgb(11, 48, 65);
 }
 
-/* Adiciona um ajuste para telas menores */
+/*---BUTTONS---*/
+
+/*---FOOTER---*/
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*---FOOTER---*/
+
+/*---RESPONSIVE CONFIG---*/
+
 @media (max-width: 768px) {
   .panel {
-    max-width: 100%; /* Altera o tamanho máximo para ocupar toda a largura da tela em telas menores */
+    max-width: 100%;
   }
 
   .logo {
-    font-size: 16pt; /* Diminui o tamanho do texto do logo em telas menores */
+    font-size: 16pt;
   }
 
   .footer {
@@ -84,11 +111,11 @@
 
 @media (max-width: 450px) {
   .panel {
-    max-width: 100%; /* Altera o tamanho máximo para ocupar toda a largura da tela em telas menores */
+    max-width: 100%;
   }
 
   .logo {
-    font-size: 14pt; /* Diminui o tamanho do texto do logo em telas menores */
+    font-size: 14pt;
   }
 
   .footer {
@@ -96,7 +123,4 @@
   }
 }
 
-.footer {
-  text-align: center; /* Centraliza o texto */
-  margin-top: 20px; /* Adiciona um espaçamento superior */
-}
+/*---RESPONSIVE CONFIG---*/
