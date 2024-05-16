@@ -36,57 +36,57 @@ export default (_rows, _cols, _bombs) => {
   /*---SET BOMBS RANDOM---*/
 
   /*---SET NUMBERS ON CELLS ABOUT BOMBS---*/
-  //   for (let row = 0; row < _rows; row++) {
-  //     for (let col = 0; col < _cols; col++) {
-  //       if (board[row][col].value === "X") {
-  //         continue;
-  //       }
+  for (let row = 0; row < _rows; row++) {
+    for (let col = 0; col < _cols; col++) {
+      if (board[row][col].value === "X") {
+        continue;
+      }
 
-  //       // Top
-  //       if (row > 0 && board[row - 1][col].value === "X") {
-  //         board[row][col].value++;
-  //       }
+      // Top
+      if (row > 0 && board[row - 1][col].value === "X") {
+        board[row][col].value++;
+      }
 
-  //       // Top Right
-  //       if (row > 0 && col < _cols - 1 && board[row - 1][col + 1].value === "X") {
-  //         board[row][col].value++;
-  //       }
+      // Top Right
+      if (row > 0 && col < _cols - 1 && board[row - 1][col + 1].value === "X") {
+        board[row][col].value++;
+      }
 
-  //       // Right
-  //       if (col < _cols - 1 && board[row][col + 1].value === "X") {
-  //         board[row][col].value++;
-  //       }
+      // Right
+      if (col < _cols - 1 && board[row][col + 1].value === "X") {
+        board[row][col].value++;
+      }
 
-  //       // Botoom Right
-  //       if (
-  //         row < _rows - 1 &&
-  //         col < _cols - 1 &&
-  //         board[row + 1][col + 1].value === "X"
-  //       ) {
-  //         board[row][col].value++;
-  //       }
+      // Botoom Right
+      if (
+        row < _rows - 1 &&
+        col < _cols - 1 &&
+        board[row + 1][col + 1].value === "X"
+      ) {
+        board[row][col].value++;
+      }
 
-  //       // Bottom
-  //       if (row < _rows - 1 && board[row + 1][col].value === "X") {
-  //         board[row][col].value++;
-  //       }
+      // Bottom
+      if (row < _rows - 1 && board[row + 1][col].value === "X") {
+        board[row][col].value++;
+      }
 
-  //       // Bottom Left
-  //       if (row < _rows - 1 && col > 0 && board[row + 1][col - 1].value === "X") {
-  //         board[row][col].value++;
-  //       }
+      // Bottom Left
+      if (row < _rows - 1 && col > 0 && board[row + 1][col - 1].value === "X") {
+        board[row][col].value++;
+      }
 
-  //       // LEft
-  //       if (col > 0 && board[row][col - 1].value === "X") {
-  //         board[row][col].value++;
-  //       }
+      // LEft
+      if (col > 0 && board[row][col - 1].value === "X") {
+        board[row][col].value++;
+      }
 
-  //       // Top Left
-  //       if (row > 0 && col > 0 && board[row - 1][col - 1].value === "X") {
-  //         board[row][col].value++;
-  //       }
-  //     }
-  //   }
+      // Top Left
+      if (row > 0 && col > 0 && board[row - 1][col - 1].value === "X") {
+        board[row][col].value++;
+      }
+    }
+  }
   /*---SET NUMBERS ON CELLS ABOUT BOMBS---*/
 
   return { board, mineLocation };

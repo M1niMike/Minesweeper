@@ -35,7 +35,7 @@ function ConfigMenu(props) {
   const boardConfig = {
     easy: { rows: 9, cols: 9, bombs: 10 },
     normal: { rows: 16, cols: 16, bombs: 40 },
-    hard: { rows: 30, cols: 30, bombs: 99 },
+    hard: { rows: 30, cols: 16, bombs: 99 },
   };
 
   /*
