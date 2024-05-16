@@ -11,8 +11,8 @@ export default (_rows, _cols, _bombs) => {
         value: 0,
         x: x,
         y: y,
-        isFound: false,
-        isTagged: false,
+        isRevealed: false,
+        state: 1,
       });
     }
     board.push(row);
@@ -36,54 +36,59 @@ export default (_rows, _cols, _bombs) => {
   /*---SET BOMBS RANDOM---*/
 
   /*---SET NUMBERS ON CELLS ABOUT BOMBS---*/
-  for (let row = 0; row < _rows; row++) {
-    for (let col = 0; col < _cols; col++) {
-      if (board[row][col].value === "X") {
+  for (let x = 0; x < _rows; x++) {
+    for (let y = 0; y < _cols; y++) {
+      //se encontrar uma bomba, nao faz nada
+      if (board[x][y].value === "X") {
         continue;
       }
 
-      // Top
-      if (row > 0 && board[row - 1][col].value === "X") {
-        board[row][col].value++;
+      // Em cima
+      //verifica se nao esta na primeira linha && verifica se a uma bomba acima
+      if (x > 0 && board[x - 1][y].value === "X") {
+        board[x][y].value++;
       }
 
-      // Top Right
-      if (row > 0 && col < _cols - 1 && board[row - 1][col + 1].value === "X") {
-        board[row][col].value++;
+      // Canto superior esquerdo
+      // verifica se nao esta na primeira linha && verifica se nao esta na primeira coluna && verifica a posicao
+      if (x > 0 && y > 0 && board[x - 1][y - 1].value === "X") {
+        board[x][y].value++;
       }
 
-      // Right
-      if (col < _cols - 1 && board[row][col + 1].value === "X") {
-        board[row][col].value++;
+      // canto superior direito
+      // verifica se nao esta na primeira linha && verifica se nao esta na ultima coluna && verifica a posição
+      if (x > 0 && y < _cols - 1 && board[x - 1][y + 1].value === "X") {
+        board[x][y].value++;
       }
 
-      // Botoom Right
-      if (
-        row < _rows - 1 &&
-        col < _cols - 1 &&
-        board[row + 1][col + 1].value === "X"
-      ) {
-        board[row][col].value++;
+      // esquerda
+      //verifica se nao esta na primeira coluna && verifica posiçao
+      if (y > 0 && board[x][y - 1].value === "X") {
+        board[x][y].value++;
       }
 
-      // Bottom
-      if (row < _rows - 1 && board[row + 1][col].value === "X") {
-        board[row][col].value++;
+      // direita
+      // verifica se nao esta na ultima coluna && verifica a posição
+      if (y < _cols - 1 && board[x][y + 1].value === "X") {
+        board[x][y].value++;
       }
 
-      // Bottom Left
-      if (row < _rows - 1 && col > 0 && board[row + 1][col - 1].value === "X") {
-        board[row][col].value++;
+      // embaixo
+      // verifica se nao esta na ultima linha && verifica a posição
+      if (x < _rows - 1 && board[x + 1][y].value === "X") {
+        board[x][y].value++;
       }
 
-      // LEft
-      if (col > 0 && board[row][col - 1].value === "X") {
-        board[row][col].value++;
+      // canto inferior esquerdo
+      //verifica se nao esta na ultima linha && verifica se nao esta na primeira coluna && verifica posição
+      if (x < _rows - 1 && y > 0 && board[x + 1][y - 1].value === "X") {
+        board[x][y].value++;
       }
 
-      // Top Left
-      if (row > 0 && col > 0 && board[row - 1][col - 1].value === "X") {
-        board[row][col].value++;
+      // canto inferior direito
+      // verifica se nao esta na ultima linha && verificna se nao esta na ultima coluna && verifica posicao
+      if (x < _rows - 1 && y < _cols - 1 && board[x + 1][y + 1].value === "X") {
+        board[x][y].value++;
       }
     }
   }
