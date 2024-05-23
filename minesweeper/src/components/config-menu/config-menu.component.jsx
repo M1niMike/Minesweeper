@@ -33,7 +33,7 @@ function ConfigMenu(props) {
   define as props (rows e cols) para o component gameBoard
   */
   const boardConfig = {
-    easy: { rows: 9, cols: 9, bombs: 10 },
+    easy: { rows: 5, cols: 5, bombs: 1 },
     normal: { rows: 16, cols: 16, bombs: 40 },
     hard: { rows: 30, cols: 16, bombs: 99 },
   };

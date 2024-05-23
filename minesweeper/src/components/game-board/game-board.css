@@ -9,7 +9,7 @@
 /*---BOARD COMPONENT---*/
 .gameBoard {
   display: grid;
-  grid-auto-rows: 25px; /* Define a altura fixa das linhas */
+  grid-auto-rows: 30px; /* Define a altura fixa das linhas */
   grid-gap: 0px; /* Adiciona um espaço entre as células */
   margin: 10px;
   padding: 10px;
@@ -17,24 +17,16 @@
 }
 
 .cell {
-  background-color: #ccc;
-  border: 1px solid #333;
-  width: 25px; /* Define a largura das células */
-  height: 25px; /* Define a altura das células */
+  background-color: #d5e4eb;
+  border: 0.1px solid #2d8bb7;
+  width: 30px;
+  height: 30px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .cell:hover {
-  background-color: #f60000;
-  border: 1px solid #333;
-  width: 25px; /* Define a largura das células */
-  height: 25px; /* Define a altura das células */
-}
-
-.cell:active {
-  background-color: #f60000;
-  border: 1px solid #333;
-  width: 25px; /* Define a largura das células */
-  height: 25px; /* Define a altura das células */
+  background-color: #2d8bb7;
 }
 
 .boardRow {

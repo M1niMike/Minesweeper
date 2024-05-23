@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Board from "./board.component";
 import "./game-board.css";
 
 function GameBoard(props) {
+  let [flagCount, setFlagCount] = useState(0);
+
   const handleReturnConfigMenu = () => {
     props.onQuitClick();
+  };
+
+  const getFlagCountFromChild = (Count) => {
+    setFlagCount(Count);
   };
 
   //   const handleReturnClick = () => {
@@ -18,11 +24,15 @@ function GameBoard(props) {
       </span>
 
       <div className="gamePanel">
-        <span>
-          TIMER:
-          <p>BOMBS:{props.bombs}</p>
-        </span>
-        <Board rows={props.rows} cols={props.cols} bombs={props.bombs} />
+        <span>⏱:</span>
+        <span>💣: {props.bombs}</span>
+        <span>🚩: {flagCount}</span>
+        <Board
+          rows={props.rows}
+          cols={props.cols}
+          bombs={props.bombs}
+          FlagCounterOnParent={getFlagCountFromChild}
+        />
       </div>
 
       <div className="actionBar">
