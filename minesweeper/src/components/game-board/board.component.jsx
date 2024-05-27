@@ -111,7 +111,7 @@ function Board(props) {
   return (
     <div>
       <div className="gameBoard">
-        <span>TESTE CELL: {leftCells}</span>
+        <span>Cells left: {leftCells}</span>
         {grid.map((row, rowIndex) => (
           <div className="boardRow" key={rowIndex}>
             {row.map((cell, cellIndex) => (

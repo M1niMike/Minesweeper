@@ -42,13 +42,13 @@ function MainMenu() {
           <button className="btnPlay" onClick={handleStartClick}>
             Start Game
           </button>
-          <button className="btnScoreboard">Scoreboard</button>
-          <button className="btnAbout">About Us</button>
+          {/* <button className="btnScoreboard">Scoreboard</button>
+          <button className="btnAbout">About Us</button> */}
         </div>
       )}
 
       <div className="footer">
-        <span>Linguagen Script 23/24 - Micael Eid | Carlos Lima</span>
+        <span>Linguagem Script 23/24 - Micael Eid | Carlos Lima</span>
       </div>
     </div>
   );

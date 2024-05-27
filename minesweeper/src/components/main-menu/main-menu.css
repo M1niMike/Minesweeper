@@ -51,9 +51,6 @@
 .btnPlay,
 .btnScoreboard,
 .btnAbout {
-  font-family: "Varela Round", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   margin: 10px;
   border-radius: 5px;
   background-color: rgb(30, 129, 175);
@@ -86,9 +83,6 @@
 .footer {
   text-align: center;
   margin-top: 20px;
-  font-family: "Varela Round", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 /*---FOOTER---*/
