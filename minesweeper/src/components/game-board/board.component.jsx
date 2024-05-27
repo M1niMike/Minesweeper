@@ -33,7 +33,6 @@ function Board(props) {
   };
 
   const handleCellEvents = (e, x, y) => {
-    console.log("Right Click");
     e.preventDefault();
 
     let newGrid = JSON.parse(JSON.stringify(grid));
@@ -45,8 +44,6 @@ function Board(props) {
       newGrid[x][y].state = 1;
     }
 
-    console.log(flagCount);
-    console.log(newGrid[x][y]);
     setGrid(newGrid);
   };
 
@@ -64,7 +61,6 @@ function Board(props) {
       newGrid[x][y].isRevealed = true;
 
       if (leftCells === 0) {
-        alert("Game over");
         setIsGameOver(true);
         setTimeout(() => {
           props.isGameOverFromParent(true);
@@ -75,8 +71,6 @@ function Board(props) {
     }
 
     if (newGrid[x][y].value === "X") {
-      alert("mine found");
-
       newGrid.forEach((row) => {
         row.forEach((cell) => {
           if (cell.value === "X") {
