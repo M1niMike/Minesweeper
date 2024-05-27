@@ -1,16 +1,20 @@
 .gamePanel {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
+  gap: 5px;
+}
+
+.gamePanel span {
+  margin-right: 10px; /* Espaçamento opcional entre os spans */
 }
 
 /*---BOARD COMPONENT---*/
 .gameBoard {
   display: grid;
-  grid-auto-rows: 30px; /* Define a altura fixa das linhas */
-  grid-gap: 0px; /* Adiciona um espaço entre as células */
+  grid-auto-rows: 30px;
+  grid-gap: 0px; /* Adiciona um espaço entre as celulas */
   margin: 10px;
   padding: 10px;
   width: auto;

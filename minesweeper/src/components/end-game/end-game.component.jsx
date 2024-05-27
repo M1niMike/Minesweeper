@@ -1,7 +1,9 @@
-function EndGameMenu() {
+function EndGameMenu(props) {
   return (
     <div>
-      <p>GAME OVER!!!</p>
+      <div className="EndGame">
+        <p>GAME OVER!!!</p>
+      </div>
     </div>
   );
 }
