@@ -3,6 +3,7 @@ function EndGameMenu(props) {
     <div>
       <div className="EndGame">
         <p>GAME OVER!!!</p>
+        <span>🚩:{props.flagCount}</span>
       </div>
     </div>
   );

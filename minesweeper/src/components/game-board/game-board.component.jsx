@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Board from "./board.component";
 import EndGameMenu from "./../end-game/end-game.component";
 import "./game-board.css";
+import Timer from "../../helpers/timer";
 
 function GameBoard(props) {
   let [flagCount, setFlagCount] = useState(0);
@@ -26,11 +27,14 @@ function GameBoard(props) {
   return (
     <div className="innerPanel">
       {isGameOver ? (
-        <EndGameMenu />
+        <EndGameMenu flagCount={flagCount} />
       ) : (
         <div>
           <div className="gamePanel">
-            <span>⏱:</span>
+            <span>
+              ⏱:
+              <Timer />
+            </span>
             <span>💣:{props.bombs}</span>
             <span>🚩:{flagCount}</span>
           </div>

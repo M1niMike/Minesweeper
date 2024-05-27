@@ -64,7 +64,7 @@ function Board(props) {
         setIsGameOver(true);
         setTimeout(() => {
           props.isGameOverFromParent(true);
-        }, 800);
+        }, 1000);
       }
 
       setGrid(newGrid);
@@ -82,7 +82,7 @@ function Board(props) {
       setIsGameOver(true);
       setTimeout(() => {
         props.isGameOverFromParent(true);
-      }, 800);
+      }, 1000);
     }
   };
 
