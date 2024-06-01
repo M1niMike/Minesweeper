@@ -4,7 +4,6 @@ import "./main-menu.css";
 import ConfigMenu from "../config-menu/config-menu.component";
 
 function MainMenu() {
-  /*TRATAMENTO DO BOTAO START (ABRE NOVO COMPONENT)*/
   const [isStarted, setIsStarted] = useState(false);
 
   const handleStartClick = () => {
@@ -14,7 +13,6 @@ function MainMenu() {
   const handleReturnClick = () => {
     setIsStarted(false);
   };
-  /*TRATAMENTO DO BOTAO START (ABRE NOVO COMPONENT)*/
 
   let mineIcon = require("../../assets/images/Mine-Icon.png");
   let flagIcon = require("../../assets/images/Flag-Icon.png");
@@ -42,8 +40,6 @@ function MainMenu() {
           <button className="btnPlay" onClick={handleStartClick}>
             Start Game
           </button>
-          {/* <button className="btnScoreboard">Scoreboard</button>
-          <button className="btnAbout">About Us</button> */}
         </div>
       )}
 

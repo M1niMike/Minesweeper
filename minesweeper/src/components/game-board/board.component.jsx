@@ -29,7 +29,7 @@ function Board(props) {
       setFlagCount(flagCount);
     }
 
-    props.flagCounterFromParent(flagCount);
+    props.flagCounterToParent(flagCount);
   };
 
   const handleCellEvents = (e, x, y) => {
@@ -63,7 +63,7 @@ function Board(props) {
       if (leftCells === 0) {
         setIsGameOver(true);
         setTimeout(() => {
-          props.isGameOverFromParent(true);
+          props.isGameOverToParent(true, leftCells, 2);
         }, 1000);
       }
 
@@ -81,7 +81,7 @@ function Board(props) {
       setGrid(newGrid);
       setIsGameOver(true);
       setTimeout(() => {
-        props.isGameOverFromParent(true);
+        props.isGameOverToParent(true, leftCells, 1);
       }, 1000);
     }
   };

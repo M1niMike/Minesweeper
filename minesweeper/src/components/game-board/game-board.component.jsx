@@ -7,6 +7,9 @@ import Timer from "../../helpers/timer";
 function GameBoard(props) {
   let [flagCount, setFlagCount] = useState(0);
   const [isGameOver, setIsGameOver] = useState(false);
+  const [leftCells, setLeftCells] = useState(0);
+  const [typeOfGameOver, setTypeOfGameOver] = useState(0);
+  const { seconds, stopTimer } = Timer();
 
   const handleReturnConfigMenu = () => {
     props.onQuitClick();
@@ -16,34 +19,39 @@ function GameBoard(props) {
     setFlagCount(Count);
   };
 
-  const getisGameOverFromChild = (gameOver) => {
+  const getIsGameOverFromChild = (gameOver, leftCells, typeOfGameOver) => {
+    stopTimer();
+    setLeftCells(leftCells);
+    setTypeOfGameOver(typeOfGameOver);
     setIsGameOver(gameOver);
   };
-
-  //   const handleReturnClick = () => {
-  //     setIsGameModeChoose(false);
-  //   };
 
   return (
     <div className="innerPanel">
       {isGameOver ? (
-        <EndGameMenu flagCount={flagCount} />
+        <EndGameMenu
+          flagCount={flagCount}
+          finalTimer={seconds}
+          leftCells={leftCells}
+          typeOfGameOver={typeOfGameOver}
+          rows={props.rows}
+          cols={props.cols}
+          bombs={props.bombs}
+          onQuitClick={props.onQuitClick}
+        />
       ) : (
         <div>
           <div className="gamePanel">
-            <span>
-              ⏱:
-              <Timer />
-            </span>
-            <span>💣:{props.bombs}</span>
-            <span>🚩:{flagCount}</span>
+            <span>⏱: {seconds}</span>
+            <span>💣: {props.bombs}</span>
+            <span>🚩: {flagCount}</span>
           </div>
           <Board
             rows={props.rows}
             cols={props.cols}
             bombs={props.bombs}
-            flagCounterFromParent={getFlagCountFromChild}
-            isGameOverFromParent={getisGameOverFromChild}
+            flagCounterToParent={getFlagCountFromChild}
+            isGameOverToParent={getIsGameOverFromChild}
           />
 
           <div className="actionBar">

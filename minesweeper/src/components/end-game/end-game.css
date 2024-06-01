@@ -1,0 +1,20 @@
+.endGamePanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 5px;
+}
+
+.endGameInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.endGameInfo span {
+  margin-right: 15px; /* Espaçamento opcional entre os spans */
+}

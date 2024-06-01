@@ -1,7 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default (_rows, _cols, _bombs) => {
   let board = [];
-  let mineLocation = [];
 
   /*---BUILD BOARD---*/
   for (let x = 0; x < _rows; x++) {
@@ -18,8 +17,6 @@ export default (_rows, _cols, _bombs) => {
     board.push(row);
   }
 
-  /*---BUILD BOARD---*/
-
   /*---SET BOMBS RANDOM---*/
   let bombCount = 0;
   while (bombCount < _bombs) {
@@ -28,12 +25,9 @@ export default (_rows, _cols, _bombs) => {
 
     if (board[x][y].value === 0) {
       board[x][y].value = "X";
-      mineLocation.push([x, y]);
       bombCount++;
     }
   }
-
-  /*---SET BOMBS RANDOM---*/
 
   /*---SET NUMBERS ON CELLS ABOUT BOMBS---*/
   for (let x = 0; x < _rows; x++) {
@@ -92,9 +86,8 @@ export default (_rows, _cols, _bombs) => {
       }
     }
   }
-  /*---SET NUMBERS ON CELLS ABOUT BOMBS---*/
 
-  return { board, mineLocation };
+  return { board };
 };
 
 function randomNum(min = 0, max) {
